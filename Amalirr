@@ -1,0 +1,125 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<head>
+	<title>Карта Амалирра</title>
+
+<style type="text/css">
+  html { 
+    background: url(http://d.radikal.ru/d28/1811/a8/cbf2fc5f30c0.jpg); 
+   }
+body::-webkit-scrollbar {
+	width: 6px;
+	background-color: #333333;
+}
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #8f8f8f;
+}
+
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #333333;
+}
+
+.border{
+margin-left: auto;
+margin-right: auto;
+}
+.Amalirr{
+        font-family:'Roboto Slab';
+	position: absolute;
+	border: solid silver 1px;
+	background-color: #22393B;
+	font-size: 13px;
+	color: #bdbeb7;
+	line-height: 12px;
+	padding: 2px 5px;
+	margin: 25px 0px 0px 5px;
+	filter:alpha(opacity=85);
+	-moz-opacity:.85;
+	opacity:.85;
+	visibility='hidden'
+}
+   @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,700&subset=cyrillic');
+
+  </style>  
+  <link href="https://a.radikal.ru/a42/1809/e7/88e2bddbfd9f.png" type="image/png" rel="icon" />   <script type="text/javascript">
+
+var d = document;
+var offsetfromcursorY=15 // y offset of tooltip
+var ie=d.all && !window.opera;
+var ns6=d.getElementById && !d.all;
+var tipobj,op;
+		
+function show(el,txt) {
+	tipobj=d.getElementById('mess');
+	tipobj.innerHTML = txt;
+	op = 0.1;	
+	tipobj.style.opacity = op; 
+	tipobj.style.visibility="visible";
+
+	el.onmousemove=positiontip;
+	appear();
+}
+
+function hide(el) {
+	d.getElementById('mess').style.visibility='hidden';
+	el.onmousemove='';
+}
+
+function ietruebody(){
+return (d.compatMode && d.compatMode!="BackCompat")? d.documentElement : d.body
+}
+
+function positiontip(e) {
+	var curX=(ns6)?e.pageX : event.clientX+ietruebody().scrollLeft;
+	var curY=(ns6)?e.pageY : event.clientY+ietruebody().scrollTop;
+	var winwidth=ie? ietruebody().clientWidth : window.innerWidth-20
+	var winheight=ie? ietruebody().clientHeight : window.innerHeight-20
+	
+	var rightedge=ie? winwidth-event.clientX : winwidth-e.clientX;
+	var bottomedge=ie? winheight-event.clientY-offsetfromcursorY : winheight-e.clientY-offsetfromcursorY;
+
+	if (rightedge < tipobj.offsetWidth)	tipobj.style.left=curX-tipobj.offsetWidth+"px";
+	else tipobj.style.left=curX+"px";
+
+	if (bottomedge < tipobj.offsetHeight) tipobj.style.top=curY-tipobj.offsetHeight-offsetfromcursorY+"px"
+	else tipobj.style.top=curY+offsetfromcursorY+"px";
+}
+
+function appear() {	
+	if(op < 0.85) {
+		op += 0.1;
+		tipobj.style.opacity = op;
+		tipobj.style.filter = 'alpha(opacity='+op*100+')';
+		t = setTimeout('appear()', 30);
+	}
+}
+
+
+</script>
+
+
+</head>
+
+<div class="Amalirr" id="mess" style="visibility: hidden"></div>
+<body>
+
+
+<div style="visibility: hidden" id="mess" class="Amalirr">
+</div>
+                           
+<center>
+	                                                         
+	<div class="border">
+<img style="width: 1738px; height: 1439px;" usemap="#Tavantin" title="" src="http://c.radikal.ru/c05/1811/43/3a88b75e5ac8.jpg" />                             
+	</div>
+	<map name="Tavantin">  <area href="http://www.amalirr.com/f41-forum#top" onmouseout="hide(this);" onmouseover="show(this,'<b>Ундервуд</b><br/>Самая большая имперская провинция. <br/>Большая часть ее территории это леса и болота<br/>Тоже жмякательно!');" coords="272,413,370,196,540,150,680,320" shape="poly" /><area href="http://www.amalirr.com/f15-forum#top" onmouseout="hide(this);" onmouseover="show(this,'Столица Империи<br/>Далее следует описание столицы Империи. <br/>Данный квадратик подлежит жмяканию');" coords="399,510,433,533" shape="rect" />
+	</map> 
+</center>
+
+
+</body>
+</html>
